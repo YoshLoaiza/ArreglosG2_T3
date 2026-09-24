@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Arreglos.Logica;
+Console.WriteLine("\nArreglos");
+MiArreglo oMiArreglo = new MiArreglo(10);
+oMiArreglo.Llenar(5, 20);
+Console.WriteLine("\nArreglo Desordenado");
+Console.WriteLine(oMiArreglo.ToString());
+Console.WriteLine("\nArreglo ordenado descendente");
+oMiArreglo.Ordenar(false);
+Console.WriteLine(oMiArreglo.ToString());
+Console.WriteLine("\nArreglo ordenado ascendente");
+oMiArreglo.Ordenar(true);
+Console.WriteLine(oMiArreglo.ToString());
+Console.ReadKey();
