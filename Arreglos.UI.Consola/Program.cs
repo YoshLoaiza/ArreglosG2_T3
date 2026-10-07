@@ -13,6 +13,8 @@ internal class Program
             oMiArreglo.Agregar(-4);
             Console.WriteLine(oMiArreglo);
             Console.ReadKey();
+
+            oMiArreglo.Insertar(200, 1);
         }
         catch (Exception ex)
         {
