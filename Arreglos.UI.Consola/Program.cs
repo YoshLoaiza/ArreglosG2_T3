@@ -1,13 +1,25 @@
-﻿using Arreglos.Logica;
-Console.WriteLine("\nArreglos");
-MiArreglo oMiArreglo = new MiArreglo(10);
-oMiArreglo.Llenar(5, 20);
-Console.WriteLine("\nArreglo Desordenado");
-Console.WriteLine(oMiArreglo.ToString());
-Console.WriteLine("\nArreglo ordenado descendente");
-oMiArreglo.Ordenar(false);
-Console.WriteLine(oMiArreglo.ToString());
-Console.WriteLine("\nArreglo ordenado ascendente");
-oMiArreglo.Ordenar(true);
-Console.WriteLine(oMiArreglo.ToString());
-Console.ReadKey();
+using Arreglos.Logica;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("\nArreglos");
+        MiArreglo oMiArreglo = new MiArreglo(5);
+        try
+        {
+            oMiArreglo.Agregar(10);
+            oMiArreglo.Agregar(5);
+            oMiArreglo.Agregar(-4);
+            Console.WriteLine(oMiArreglo);
+            Console.ReadKey();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        Console.WriteLine(oMiArreglo);
+
+        Console.ReadKey();
+    }
+}
